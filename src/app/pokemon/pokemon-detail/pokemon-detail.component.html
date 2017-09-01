@@ -1,0 +1,18 @@
+<div *ngIf="pokemon">
+  <h2>#{{pokemon.id}} - {{pokemon.name}}</h2>
+  <div>
+    <img [src]="pokemon.sprites.front_default"/>
+  </div>
+  <div>
+    <label>height:  </label>{{pokemon.height}}
+  </div>
+  <div>
+    <label>weight:  </label>{{pokemon.weight}}
+  </div>
+  <div>
+    <label>Types</label>
+      <ul>
+        <li *ngFor="let typeContainer of pokemon.types">{{typeContainer.type.name}}</li>
+      </ul>
+  </div>
+</div>
