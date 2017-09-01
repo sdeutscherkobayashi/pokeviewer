@@ -1,28 +1,32 @@
 import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
+import { HttpModule }    from '@angular/http';
 
 import { AppComponent }         from './app.component';
 import { DashboardComponent }   from './dashboard.component';
-import { HeroDetailComponent }  from './hero-detail.component';
-import { HeroesComponent }      from './heroes.component';
-import { HeroService }          from './hero.service';
+import { PokemonViewerComponent }  from './pokemon/pokemon-viewer/pokemon-viewer.component';
+import { PokemonDetailComponent }  from './pokemon/pokemon-detail/pokemon-detail.component';
 
 import { AppRoutingModule }     from './app-routing.module';
+
+import { PokemonService } from './pokemon/services/pokemon.service'
+import { HeroService } from './hero.service'
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
   declarations: [
     AppComponent,
     DashboardComponent,
-    HeroDetailComponent,
-    HeroesComponent
+    PokemonDetailComponent,
+    PokemonViewerComponent
   ],
-  providers: [ HeroService ],
+  providers: [ PokemonService, HeroService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
