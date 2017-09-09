@@ -11,7 +11,6 @@ import { PokemonDetailComponent }  from './pokemon/pokemon-detail/pokemon-detail
 import { AppRoutingModule }     from './app-routing.module';
 
 import { PokemonService } from './pokemon/services/pokemon.service'
-import { HeroService } from './hero.service'
 
 @NgModule({
   imports: [
@@ -26,7 +25,7 @@ import { HeroService } from './hero.service'
     PokemonDetailComponent,
     PokemonViewerComponent
   ],
-  providers: [ PokemonService, HeroService ],
+  providers: [ PokemonService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
